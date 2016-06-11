@@ -1,19 +1,14 @@
-<div ng-controller='mainCtrl'  class="ng-cloak">
+<div ng-controller='tableViewCtrl'  class="ng-cloak">
   <table>
     <thead>
-      <tr>
-        <th>Tur</th>
-        <th>Spår</th>
-        <th>Tid</th>
+      <tr class="tableModel.rows.header.class">
+        <th ng-repeat="col in tableModel.cols" class="{{col.header.class}}">{{col.header.text}}</th>
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="item in rows">
-        <td>{{item.block}}</td>
-        <td>{{item.track}}</td>
-        <td>{{item.time}}</td>
+      <tr ng-repeat="item in data" class="tableModel.rows.header.class">
+        <td ng-repeat="col in tableModel.cols" ng-class="{{col.body.class}}">{{item[col.body.model]}}</td>
       </tr>
     </tbody>
   </table>
-  {{test}}
 </div>

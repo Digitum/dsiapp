@@ -5,6 +5,7 @@
 
   </head>
   <body ng-app="appMain" style="background-image: url('/images/bg1.jpg'); background-size:cover; overflow: hidden;" ng-click="adminClicks()">
+    <div ng-controller="tableViewCtrl" ng-include="'/views/tableView.html'"></div>
     <div ng-controller="sysInfoCtrl" ng-include="'/views/sysInfoView.html'"></div>
     <script type="text/javascript" src="/components/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="/components/angular/angular.min.js"></script>

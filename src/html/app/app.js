@@ -14,6 +14,46 @@ app.controller("mainCtrl", ['$scope','$document', function($scope, $document) {
 //    $scope.clicks++; 
 //  };
 }]);
+
+app.controller("tableViewCtrl", ['$scope', '$http', function($scope, $http) {
+  $scope.tableModel = {
+    row: {
+      header: {
+        class: "rowHeaderClass"
+      },
+      body: {
+        class: "rowBodyClass"
+      }
+    },
+    cols: [
+      {
+        header: {
+          text: "First",
+          class: "FirstHeaderClass"
+        },
+        body: {
+          model: "col1",
+          class: "cellBodyClass1"
+        }
+      },
+      {
+        header: {
+          text: "Second",
+          class: "SecondHeaderClass"
+        },
+        body: {
+          model: "col2",
+          class: "cellBodyClass2"
+        }
+      }
+    ]
+  };
+  $scope.data = [
+    {col1: 'hadsfga', col2: '1242143'},
+    {col1: 'Tesetdata1', col2: '72347'},
+    {col1: 'Teseaes', col2: 'r56'}
+  ];
+}]);
 app.controller("sysInfoCtrl", ['$scope', '$http', function($scope, $http) {
   $scope.externalIp = "Unknown";
   $scope.internalIpList = [];

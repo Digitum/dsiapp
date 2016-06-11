@@ -3,6 +3,7 @@ var express = require('express');
 var app = express();
 os = require('os');
 const exec = require('child_process').exec;
+var user = 'pi';
 
 // Test
 // Static files
@@ -22,7 +23,7 @@ app.get('/myip.json', function(req, res){
 });
 // Send reload browser command
 app.get('/reload', function(req, res){
-  exec('/bin/su - pi -c /home/pi/scripts/refresh', (err, stdout, stderr) => {
+  exec('/bin/su - ' + user + ' -c /home/pi/scripts/refresh', (err, stdout, stderr) => {
     if (err) {
       res.send([err, stderr]);
       return;
@@ -58,12 +59,6 @@ app.listen(8080, function () {
   console.log('Example app listening on port 8080!');
 });
 
-function getBtDevices() {
-
-
-
-
-}
 function getLocalIp(){
   var interfaces = os.networkInterfaces();
   var data = [];
