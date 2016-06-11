@@ -1,0 +1,18 @@
+{
+  "name": "digital-signalge-app",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "express": "3.x",
+    "jquery": "1.12.4",
+    "angular": "1.x",
+    "angular-animate": "*",
+    "angular-aria": "*",
+    "angular-material": "*"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "public-ip": "^2.0.1"
+  }
+}

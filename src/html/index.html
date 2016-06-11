@@ -1,0 +1,18 @@
+<!doctype HTML>
+<html>
+  <head>
+    <title>Test</title>
+
+  </head>
+  <body ng-app="appMain" style="background-image: url('/images/bg1.jpg'); background-size:cover; overflow: hidden;" ng-click="adminClicks()">
+    <div ng-include="'/views/tableView.html'"></div>
+    <div ng-controller="canvasTestCtrl" ng-include="'/views/canvasTestView.html'"></div>
+    <div ng-controller="sysInfoCtrl" ng-include="'/views/sysInfoView.html'"></div>
+    <script type="text/javascript" src="/components/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="/app/app.js"></script>
+    <script type="text/javascript" src="/app/js/canvasTest.js"></script>
+    <script type="text/javascript" src="/app/js/sysInfo.js"></script>
+    Klicks: {{adminClicks}}
+  </body>
+</html>

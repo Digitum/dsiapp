@@ -1,0 +1,19 @@
+<div ng-controller='mainCtrl'  class="ng-cloak">
+  <table>
+    <thead>
+      <tr>
+        <th>Tur</th>
+        <th>Spår</th>
+        <th>Tid</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="item in rows">
+        <td>{{item.block}}</td>
+        <td>{{item.track}}</td>
+        <td>{{item.time}}</td>
+      </tr>
+    </tbody>
+  </table>
+  {{test}}
+</div>

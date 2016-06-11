@@ -1,0 +1,31 @@
+<div ng-controller='sysInfoCtrl' class="ng-cloak" style="background-color: #ffffff; color: black;">
+  <table>
+    <thead>
+      <tr>
+        <th>Address</th>
+        <th>Type</th>
+        <th>Interface</th>
+        <th>Internal</th>
+        <th>mac</th>
+        <th>netmask</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="item in internalIpList">
+        <td>{{item.address}}</td>
+        <td>{{item.family}}</td>
+        <td>{{item.interface}}</td>
+        <td>{{item.internal}}</td>
+        <td>{{item.mac}}</td>
+        <td>{{item.netmask}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+  External IP address: {{externalIp}}<br>
+  <button ng-click="reload()">Ladda om sidan</button>
+  <button ng-click="shutdown()">Stäng av</button>
+  <button ng-click="reboot()">Starta om</button>
+
+
+</div>
